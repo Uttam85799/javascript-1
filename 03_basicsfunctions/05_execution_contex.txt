@@ -1,0 +1,59 @@
+       
+       
+        javascript execution context
+(1). Global execution context
+            {}---->this keyword use to refer
+(2). Functional execution context       
+            
+(3). Eval execution context
+
+
+how to execute code in javascript
+
+(1) Memory creation phase or memory allocation phase allocate the momery for var function object execute
+(2) Execution phase 
+                                let var1=10;
+                                let var2=5;
+                                function addTwoNumber(number1, number2){
+                                  let result=number1+number2
+                                   return result
+                                   
+                                }
+                                let calculation = addTwoNumber(var1,var2)
+                                console.log(addTwoNumber(5,3))
+
+
+
+(1). Global Execution
+           |
+           |
+           |
+           this
+
+(2). Memory phase
+        var1----> undefine
+        var2----> undefine
+addTwoNumber----> definition
+calculation-----> undefine
+
+(3). Execution phase
+        var1 <---10
+        var2 <---5
+addTwoNumber <---------------{      newvariabel                      }
+                             {      Enviroment                       }
+                             {           +                           }------------------------> Delete
+                             {      Execution                        }
+                   ----------{      threads                          }-----------
+                   |                                                            |
+                   |                                                            |
+                   |                                                            |
+        Memory Phase                                                      exeution phase
+        var1 <----undefine                                                Number1 ------> 10
+        var2 <----undefine                                                Number2 ------> 5
+      result <----undefine                                                Return  ------>15 ---------> Global Execution context
+
+calculation  <---- 15
+addTwoNumber <---- 8
+                   
+
+
