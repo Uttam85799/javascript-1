@@ -25,6 +25,12 @@ function addOptiLanguage(langName){
    li.appendChild(document.createTextNode(langName))
    document.querySelector('.languase').appendChild(li)
 }
+function newAddOptiLanguage(langName){
+   const li= document.createElement('li');
+   li.appendChild(document.createTextNode(langName))
+   document.querySelector('.languase').appendChild(li)
+}
+newAddOptiLanguage("rust");
 addOptiLanguage("golang");
 //edit value
 const secondLang=document.querySelector("li:nth-child(2)");
@@ -33,5 +39,11 @@ const secondLang=document.querySelector("li:nth-child(2)");
 const newli=document.createElement('li')
 newli.textContent="mojo"
 secondLang.replaceWith(newli)
+
+const firstLang= document.querySelector("li:first-child");
+firstLang.outerHTML='<li>typescript</li>'
+
+const lastLang=document.querySelector("li:last-child");
+lastLang.remove();
 </script>
 </html>
